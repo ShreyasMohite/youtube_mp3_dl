@@ -88,7 +88,8 @@ class Youtubes:
                             'preferredquality': '192',
                         }],
                     }
-                    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+                    with youtube_dl.YoutubeDL(ydl_opts) as ydl:  
+
                         ydl.download(['{}'.format(urls.get())])
                     prg.stop()
                     Lab.config(text="video downloaded succssfully")
